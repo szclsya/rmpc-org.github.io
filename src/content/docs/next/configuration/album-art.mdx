@@ -48,6 +48,16 @@ For all terminals, `Block` is now supported. It will fall_back to ANSI if the te
 
 `None` completely disables album art display.
 
+### order
+
+<ConfigValue name="order" type={["EmbeddedFirst", "FileFirst", "EmbeddedOnly", "FileOnly"]} />
+
+Rmpc looks either for `cover.jpg`, `cover.png` or `cover.webp` file in the song's directory or for
+an image embedded in the song's metadata. This configures the order in which these locations are checked.
+
+Defaults to `EmbeddedFirst` which first searches the embedded metadata and then tries to look for the
+cover image file.
+
 ### max_size_px
 
 <ConfigValue name="max_size_px" type="other" customText="(<width>, <height>)" />
